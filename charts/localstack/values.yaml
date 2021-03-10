@@ -4,8 +4,8 @@
 replicaCount: 1
 
 image:
-  repository: localstack/localstack-full
-  tag: "latest"
+  repository: 10.99.254.215/ankh-is/localstack
+  tag: 0.1.17
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
