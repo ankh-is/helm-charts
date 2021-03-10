@@ -10,6 +10,8 @@
 apiVersion: {{ .Values.jxRequirements.ingress.apiVersion }}
 kind: Ingress
 metadata:
+  labels:
+  {{- include "localstack.labels" . | nindent 4 }}
   annotations:
 {{- if $annotations }}
 {{ toYaml $annotations | indent 4 }}

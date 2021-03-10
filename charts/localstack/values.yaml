@@ -49,6 +49,7 @@ debug: false
 extraEnvVars: []
 
 service:
+  name: localstack
   type: NodePort
   edgePort: 4566
   esPort: 4571
