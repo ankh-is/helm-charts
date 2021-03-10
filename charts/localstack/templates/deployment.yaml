@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       {{- include "localstack.selectorLabels" . | nindent 6 }}
+      app: {{ template "fullname" . }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -17,6 +18,7 @@ spec:
       {{- end }}
       labels:
         {{- include "localstack.selectorLabels" . | nindent 8 }}
+        app: {{ template "fullname" . }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
