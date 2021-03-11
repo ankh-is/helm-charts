@@ -47,10 +47,12 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
+              host: {{ template "localstack.fullname" . }}
               path: /health
               port: edgeport
           readinessProbe:
             httpGet:
+              host: {{ template "localstack.fullname" . }}
               path: /health
               port: edgeport
           resources:
