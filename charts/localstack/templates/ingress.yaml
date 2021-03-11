@@ -23,7 +23,7 @@ spec:
       paths:
       - backend:
           serviceName: {{ .Values.service.name }}
-          servicePort: {{ .Values.service.edgePort }}
+          servicePort: 80
 {{- if eq "NodePort" .Values.jxRequirements.ingress.serviceType }}
         path: "/"
 {{- else if .Values.jxRequirements.ingress.domain }}
