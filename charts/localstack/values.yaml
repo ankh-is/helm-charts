@@ -48,6 +48,9 @@ debug: false
 ##     value: "us-east-1"
 extraEnvVars: []
 
+livenessProbe:
+  initialDelaySeconds: 60
+
 service:
   name: localstack
   type: NodePort

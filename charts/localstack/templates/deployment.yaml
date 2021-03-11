@@ -42,12 +42,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              host: localhost
               path: /health
               port: edgeport
+            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
           readinessProbe:
             httpGet:
-              host: localhost
               path: /health
               port: edgeport
           resources:
